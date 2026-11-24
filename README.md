@@ -4,35 +4,23 @@ Custom firmware for ESP32 portable multi-tool builds sporting triple nRF24L01+ t
 
 ---
 
-## Pre-compiled Binaries (Flash Download Tool)
+## Pre-compiled Binary (Flash Download Tool)
 
-Pre-built binaries are ready in the [`Pre-compiled Bin`](Pre-compiled%20Bin) folder so you can flash directly without installing development toolchains.
+A single pre-built binary is ready in the [`Pre-compiled Bin`](Pre-compiled%20Bin) folder so you can flash directly without installing development toolchains.
 
-### Option A: Standard 4-File Flash
-Open the **Espressif Flash Download Tool** (Chip Type: `ESP32`, WorkMode: `develop`):
-
-| File | Checkbox | Address Offset |
-| :--- | :---: | :--- |
-| `Pre-compiled Bin/bootloader.bin` | `[x]` | `0x1000` |
-| `Pre-compiled Bin/partitions.bin` | `[x]` | `0x8000` |
-| `Pre-compiled Bin/boot_app0.bin` | `[x]` | `0xe000` |
-| `Pre-compiled Bin/firmware.bin` | `[x]` | `0x10000` |
-
-**Flashing Settings:**
-* **SPI SPEED:** `40MHz`
-* **SPI MODE:** `DIO`
-* **FLASH SIZE:** `32Mbit-C1` (or `4MB` / auto-detect)
-* Select your ESP32 **COM Port**, set baud to `921600` (or `115200`), hold `BOOT` if needed, and click **START**.
-
-### Option B: Single Merged File (1-Click Flash)
-Use the combined binary file that already packs the bootloader, partitions, boot_app0, and firmware into one file:
+### Flashing with Espressif Flash Download Tool:
+1. Open **Flash Download Tool** (Select Chip Type: `ESP32`, WorkMode: `develop`).
+2. Load the binary file:
 
 | File | Checkbox | Address Offset |
 | :--- | :---: | :--- |
 | `Pre-compiled Bin/LARP_BOX_full_0x0000.bin` | `[x]` | `0x0` |
 
-### Option C: MicroSD Card Update
-Copy `Pre-compiled Bin/firmware.bin` to the root directory of a FAT32-formatted MicroSD card. Insert the card into your device, boot up, navigate to **Setting -> Update Firmware**, and confirm.
+3. Flashing Settings:
+   * **SPI SPEED:** `40MHz`
+   * **SPI MODE:** `DIO`
+   * **FLASH SIZE:** `32Mbit` (or `4MB` / auto-detect)
+   * Select your ESP32 **COM Port**, set baud to `921600` (or `115200`), hold `BOOT` if needed, and click **START**.
 
 ---
 
