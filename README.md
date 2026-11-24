@@ -1,10 +1,28 @@
 # LARP_BOX
 
 <p align="center">
-  <img src="larp_box_hero.png" alt="LARP_BOX build" width="500">
+  <img src="docs/images/larp_box_hero.png" alt="LARP_BOX build" width="500">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/platform-ESP32-blue" alt="Platform">
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
+  <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status">
+  <img src="https://img.shields.io/badge/built%20with-PlatformIO-orange" alt="PlatformIO">
 </p>
 
 Custom firmware for ESP32 portable multi-tool builds sporting triple nRF24L01+ transceivers and a 128x64 OLED. Combines **nRFBox** (spectrum tools, BLE/WiFi recon, packet injection) and **RF-Clown v2.0** (multi-protocol RF carrier generator) into a single unified build with on-the-fly mode switching.
+
+## Table of Contents
+- [Pre-compiled Binary](#pre-compiled-binary-flash-download-tool)
+- [What It Does](#what-it-does)
+  - [nRFBox (Recon & Analysis Mode)](#1-nrfbox-recon--analysis-mode)
+  - [RF-Clown (Multi-Protocol Carrier Jammer)](#2-rf-clown-multi-protocol-carrier-jammer)
+- [Hardware Pinout](#hardware-pinout)
+- [Build & Flash](#build--flash)
+- [Controls](#controls)
+- [Credits & Upstream](#credits--upstream)
+- [Disclaimer](#disclaimer)
 
 ---
 
@@ -27,7 +45,7 @@ A single pre-built binary is ready in the [`Pre-compiled Bin`](Pre-compiled%20Bi
    * Select your ESP32 **COM Port**, set baud to `921600` (or `115200`), hold `BOOT` if needed, and click **START**.
 
 <p align="center">
-  <img src="flash_download_tool.png" alt="Flash Download Tool settings" width="450">
+  <img src="docs/images/flash_download_tool.png" alt="Flash Download Tool settings" width="450">
 </p>
 
 ---
@@ -37,14 +55,14 @@ A single pre-built binary is ready in the [`Pre-compiled Bin`](Pre-compiled%20Bi
 When the board boots (after the startup cat animation), you get a boot screen to pick your operating mode:
 
 <p align="center">
-  <img src="boot_selector.png" alt="Boot mode selector screen" width="350">
+  <img src="docs/images/boot_selector.png" alt="Boot mode selector screen" width="350">
 </p>
 
 ### 1. nRFBox (Recon & Analysis Mode)
 A custom carousel UI (MOGU OS-style physics, smooth horizontal slide, iris transitions) giving you 12 dedicated tools:
 
 <p align="center">
-  <img src="nrfbox_carousel.png" alt="nRFBox carousel UI" width="350">
+  <img src="docs/images/nrfbox_carousel.png" alt="nRFBox carousel UI" width="350">
 </p>
 
 * **Scanner** & **Analyzer**: 2.4 GHz spectrum scanner and live bar graph / waterfall across all 128 RF channels using the nRF24 frontend.
@@ -68,7 +86,7 @@ A custom carousel UI (MOGU OS-style physics, smooth horizontal slide, iris trans
 A dedicated, card-based UI that drives all three nRF24 radios simultaneously with high-power carrier output across targeted ISM bands:
 
 <p align="center">
-  <img src="rfclown_ui.png" alt="RF-Clown card UI" width="350">
+  <img src="docs/images/rfclown_ui.png" alt="RF-Clown card UI" width="350">
 </p>
 
 * **Protocols covered**: WiFi, Video TX (analog 5.8G/2.4G FPV downlinks), RC (drone/plane control links), BLE, Bluetooth Classic, USB Wireless (keyboards/mice), Zigbee (smart home/IoT), and raw NRF24 links.
@@ -102,7 +120,7 @@ Built around a standard ESP32-WROOM-32 (30-pin or 38-pin Dev Module).
 ```
 
 <p align="center">
-  <img src="wiring_photo.jpg" alt="Physical wiring photo" width="500">
+  <img src="docs/images/wiring_photo.png" alt="Physical wiring photo" width="500">
 </p>
 
 ### Pin Table Summary
