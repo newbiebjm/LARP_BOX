@@ -14,7 +14,7 @@ A single pre-built binary is ready in the [`Pre-compiled Bin`](Pre-compiled%20Bi
 
 | File | Checkbox | Address Offset |
 | :--- | :---: | :--- |
-| `Pre-compiled Bin/LARP_BOX_full_0x0000.bin` | `[x]` | `0x0` |
+| `Pre-compiled Bin/LARP_BOX_full.bin` | `[x]` | `0x0` |
 
 3. Flashing Settings:
    * **SPI SPEED:** `40MHz`
