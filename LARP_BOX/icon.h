@@ -210,7 +210,7 @@ const unsigned char  bitmap_icon_key [] PROGMEM = {
   0x00, 0x00, 0x80, 0x01, 0x80, 0x01, 0x80, 0x1d, 0x80, 0x1d, 0x80, 0x05, 0x80, 0x1d, 0x80, 0x1d
 };
 
-const char Line_A[] = "lamogus_0@gmail.com"; 
+const char Line_A[] = "TT - lamogus_"; 
 const char Line_B[] = "YT - lamogus_2350";   
 const char Line_C[] = "instagram/lamogus_0.o"; 
 const char txt_n[]  = "LARP_BOX:3";          
