@@ -119,9 +119,6 @@ Built around a standard ESP32-WROOM-32 (30-pin or 38-pin Dev Module).
                              +------------+
 ```
 
-<p align="center">
-  <img src="docs/images/wiring_photo.png" alt="Physical wiring photo" width="500">
-</p>
 
 ### Pin Table Summary
 
